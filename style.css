@@ -105,21 +105,28 @@ p {
 
 form {
     background-color: #ffffff;
-
     position: fixed;
-    top: 40%;
-    left: -340px;
-
+    top: 50%; /* 🎯 Centraliza no meio vertical */
+    left: -400px; /* 🎯 Esconde 100% fora da tela (nada de pontinha aparecendo) */
+    transform: translateY(-50%); /* 🎯 Mantém perfeitamente centralizado na vertical */
 
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px; /* Reduzimos um pouco o espaço entre campos para ficar mais compacto */
 
-    padding: 20px;
-    border-radius: 3px;
-    width: 350px;
-    z-index: 1;
+    padding: 25px 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 350px;
+    z-index: 2; /* Fica acima da máscara */
     transition: 0.5s left ease-in-out;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Deixa o botão de pedir orçamento com altura mais equilibrada */
+form button {
+    margin-top: 10px;
+    width: 100%; /* Ocupa a largura total do formulário */
 }
 
 form input {
