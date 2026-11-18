@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mukta", sans-serif;
+}
+
+.logo-mario {
+    width: 350px;
+}
+
+button {
+    background-color: #c51111;
+    color: #ffffff;
+    width: 200px;
+    height: 50px;
+    border-radius: 3px;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.logo-luidi-mario {
+    height: 500px;
+}
+
+.caixa-info-texto {
+    width: 40%;
+}
+
+body {
+    height: 100vh;
+}
+
+.caixa-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 100px;
+    height: 100vh;
+}
+
+.caixa-video {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+video {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.mascara-video {
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+}
+
+p {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.cabecalho img {
+    width: 70px;
+}
+
+.cabecalho a {
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cabecalho a:hover {
+    color: #c51111;
+    transition: 0.5s ease-in-out;
+}
+
+.caixa-link-whatsapp {
+    position: fixed;
+    bottom: 15px;
+    right: 12px;
+}
+
+.link-whatsapp img {
+    width: 60px;
+}
+
+.link-whatsapp {
+    cursor: pointer;
+}
+
+form {
+    background-color: #ffffff;
+
+    position: fixed;
+    top: 40%;
+    left: -340px;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 20px;
+    border-radius: 3px;
+    width: 350px;
+    z-index: 1;
+    transition: 0.5s left ease-in-out;
+}
+
+form input {
+    height: 40px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline-color: #18d80f;
+}
+
+form textarea {
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline-color: #18d80f;
+    height: 100px;
+}
+
+.mascara-formulario {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    visibility: hidden;
+    transition: 0.5s visibility ease-in-out;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Garante que o conteúdo dos serviços fique POR CIMA do vídeo */
+.caixa-servicos-pagina {
+    position: relative;
+    z-index: 2; /* Fica acima da máscara do vídeo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 20px 40px; /* Espaço para o cabeçalho fixo */
+    color: white;
+    text-align: center;
+}
+
+.titulo-servicos {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+}
+
+.cards-servicos {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+/* Card translúcido moderno (Glassmorphism) */
+.card {
+    background-color: rgba(0, 0, 0, 0.75); /* Fundo preto semi-transparente */
+    border: 2px solid #e52521;             /* Borda vermelha do Mario */
+    border-radius: 12px;
+    padding: 30px 20px;
+    width: 280px;
+    backdrop-filter: blur(4px);             /* Desfoque elegante no fundo */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);          /* Pula suavemente para cima */
+    border-color: #fbd000;                 /* Borda fica amarela ao passar o mouse */
+}
+
+.icone-servico {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: #fbd000; /* Dourado / Amarelo moeda */
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+/* Botão voltar estilizado */
+.botao-voltar {
+    margin-top: 45px;
+    background-color: #049cd8; /* Azul do macacão do Mario */
+    color: white;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botao-voltar:hover {
+    background-color: #02719d;
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}

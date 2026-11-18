@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Serviços - Mario & Luigi Encanadores</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <!-- 1. VÍDEO DE FUNDO COM A MÁSCARA -->
+    <div class="caixa-video">
+        <video src="./img/video.mp4" autoplay loop muted></video>
+        <div class="mascara-video"></div>
+    </div>
+
+    <!-- 2. CABEÇALHO -->
+    <div class="cabecalho">
+        <img src="./img/logo-header.png" alt="logo-cabecalho-mario" />
+        <a href="index.html">Home</a>
+        <a href="https://wa.me/5531996720227?text=Olá!%20Gostaria%20de%20contratar%20seus%20serviços." target="_blank" rel="noopener noreferrer">Fale Conosco</a>
+        <a href="servicos.html">Nossos Serviços</a>
+    </div>
+
+    <!-- 3. CONTEÚDO DOS SERVIÇOS -->
+    <div class="caixa-servicos-pagina">
+        <h1 class="titulo-servicos">Nossos Serviços Especializados</h1>
+        
+        <div class="cards-servicos">
+            <div class="card">
+                <span class="icone-servico">🔧</span>
+                <h3>Desentupimento de Canos</h3>
+                <p>Nenhum cano verde do Reino dos Cogumelos fica entupido com a nossa chave inglesa!</p>
+            </div>
+
+            <div class="card">
+                <span class="icone-servico">💧</span>
+                <h3>Conserto de Vazamentos</h3>
+                <p>Eliminamos qualquer vazamento antes que sua casa vire o castelo de água do Bowser.</p>
+            </div>
+
+            <div class="card">
+                <span class="icone-servico">🛠️</span>
+                <h3>Instalação Completa</h3>
+                <p>Montagem e manutenção hidráulica com garantia dos irmãos mais famosos do mundo.</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="botao-voltar">← Voltar para a Página Inicial</a>
+    </div>
+
+        <!-- Adicione isto no final do servicos.html, antes de </body> -->
+    <script>
+        // 1. Criamos a instância do áudio com o som oficial da moeda do Mario (link direto)
+        const somMoeda = new Audio("https://www.myinstants.com/media/sounds/mario-coin.mp3");
+
+        // 2. Selecionamos todos os cards usando querySelectorAll
+        const todosOsCards = document.querySelectorAll(".card");
+
+        // 3. Função que toca o som
+        const tocarSom = () => {
+            // currentTime = 0 permite tocar o som de novo imediatamente,
+            // mesmo se o usuário passar o mouse rápido em vários cards
+            somMoeda.currentTime = 0;
+            somMoeda.volume = 0.5; // Volume a 50% para não assustar o usuário
+            somMoeda.play();
+        };
+
+        // 4. Percorremos cada card usando forEach e adicionamos o evento 'mouseenter'
+        todosOsCards.forEach((card) => {
+            card.addEventListener("mouseenter", tocarSom);
+        });
+    </script>
+</body>
+</html>
+
+</body>
+</html>
