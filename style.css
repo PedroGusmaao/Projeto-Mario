@@ -71,6 +71,19 @@ p {
     align-items: center;
     gap: 30px;
     padding: 20px;
+    position: static; /* Volta a fazer parte do fluxo normal */
+}
+
+/* Quando rolar a página, o JavaScript ativa esta classe: */
+.cabecalho.rolando {
+    position: fixed;
+    padding: 10px 40px;
+    background-color: rgba(10, 12, 16, 0.85);
+    backdrop-filter: blur(5px);
+}
+
+.cabecalho.rolando img {
+    width: 50px; /* Diminui suavemente para não ocupar espaço */
 }
 
 .cabecalho img {
@@ -237,4 +250,76 @@ html {
 .botao-voltar:hover {
     background-color: #02719d;
     transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+/* ==============================================
+   RESPONSIVIDADE (TELAS DE CELULAR ATÉ 768px)
+============================================== */
+@media (max-width: 768px) {
+
+    /* 1. Cabeçalho mais compacto */
+    .cabecalho {
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 10px;
+        flex-wrap: wrap; /* Garante que os links não estourem a tela */
+    }
+
+    .cabecalho img {
+        width: 45px;
+    }
+
+    .cabecalho a {
+        font-size: 16px;
+    }
+
+    /* 2. Caixa principal: empilha o conteúdo verticalmente */
+        /* Dentro do @media (max-width: 768px) */
+    .caixa-principal {
+        flex-direction: column;
+        padding: 100px 20px 30px; /* 100px no topo para o celular */
+        height: auto;
+        gap: 30px;
+    }
+
+    /* 3. Textos e logos adaptáveis */
+    .caixa-info-texto {
+        width: 100%; /* Ocupa a largura total da tela do celular */
+        text-align: center;
+    }
+
+    .logo-mario {
+        width: 80%;
+        max-width: 260px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    /* 4. Imagem do Mario e Luigi redimensionada */
+    .logo-luidi-mario {
+        width: 90%;
+        max-width: 320px;
+        height: auto; /* Mantém a proporção correta sem achatar */
+    }
+
+    /* 5. Botão de contato */
+    button {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    /* 6. Formulário modal no celular */
+    form {
+        width: 90%; /* Ocupa quase toda a largura da tela mantendo margem */
+        max-width: 320px;
+        padding: 20px 15px;
+    }
+
+    /* 7. WhatsApp flutuante um pouco menor */
+    .link-whatsapp img {
+        width: 50px;
+    }
 }
