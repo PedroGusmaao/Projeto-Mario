@@ -71,10 +71,9 @@ p {
     align-items: center;
     gap: 30px;
     padding: 20px;
-    position: static; /* Volta a fazer parte do fluxo normal */
+    position: static;
 }
 
-/* Quando rolar a página, o JavaScript ativa esta classe: */
 .cabecalho.rolando {
     position: fixed;
     padding: 10px 40px;
@@ -83,7 +82,7 @@ p {
 }
 
 .cabecalho.rolando img {
-    width: 50px; /* Diminui suavemente para não ocupar espaço */
+    width: 50px;
 }
 
 .cabecalho img {
@@ -119,27 +118,26 @@ p {
 form {
     background-color: #ffffff;
     position: fixed;
-    top: 50%; /* 🎯 Centraliza no meio vertical */
-    left: -400px; /* 🎯 Esconde 100% fora da tela (nada de pontinha aparecendo) */
-    transform: translateY(-50%); /* 🎯 Mantém perfeitamente centralizado na vertical */
+    top: 50%;
+    left: -400px;
+    transform: translate(-50%, -50%);
 
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Reduzimos um pouco o espaço entre campos para ficar mais compacto */
+    gap: 15px;
 
     padding: 25px 20px;
     border-radius: 8px;
     width: 90%;
     max-width: 350px;
-    z-index: 2; /* Fica acima da máscara */
+    z-index: 2;
     transition: 0.5s left ease-in-out;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Deixa o botão de pedir orçamento com altura mais equilibrada */
 form button {
     margin-top: 10px;
-    width: 100%; /* Ocupa a largura total do formulário */
+    width: 100%;
 }
 
 form input {
@@ -173,14 +171,13 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Garante que o conteúdo dos serviços fique POR CIMA do vídeo */
 .caixa-servicos-pagina {
     position: relative;
-    z-index: 2; /* Fica acima da máscara do vídeo */
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 120px 20px 40px; /* Espaço para o cabeçalho fixo */
+    padding: 120px 20px 40px;
     color: white;
     text-align: center;
 }
@@ -200,20 +197,19 @@ html {
     max-width: 1000px;
 }
 
-/* Card translúcido moderno (Glassmorphism) */
 .card {
-    background-color: rgba(0, 0, 0, 0.75); /* Fundo preto semi-transparente */
-    border: 2px solid #e52521;             /* Borda vermelha do Mario */
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 2px solid #e52521;             
     border-radius: 12px;
     padding: 30px 20px;
     width: 280px;
-    backdrop-filter: blur(4px);             /* Desfoque elegante no fundo */
+    backdrop-filter: blur(4px);
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px);          /* Pula suavemente para cima */
-    border-color: #fbd000;                 /* Borda fica amarela ao passar o mouse */
+    transform: translateY(-10px);
+    border-color: #fbd000;                 
 }
 
 .icone-servico {
@@ -224,7 +220,7 @@ html {
 
 .card h3 {
     margin-bottom: 12px;
-    color: #fbd000; /* Dourado / Amarelo moeda */
+    color: #fbd000;
     font-size: 20px;
 }
 
@@ -234,10 +230,9 @@ html {
     color: #e0e0e0;
 }
 
-/* Botão voltar estilizado */
 .botao-voltar {
     margin-top: 45px;
-    background-color: #049cd8; /* Azul do macacão do Mario */
+    background-color: #049cd8; 
     color: white;
     text-decoration: none;
     padding: 12px 28px;
@@ -249,20 +244,16 @@ html {
 
 .botao-voltar:hover {
     background-color: #02719d;
-    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+    transform: scale(1.05); 
 }
 
-/* ==============================================
-   RESPONSIVIDADE (TELAS DE CELULAR ATÉ 768px)
-============================================== */
 @media (max-width: 768px) {
 
-    /* 1. Cabeçalho mais compacto */
     .cabecalho {
         justify-content: center;
         gap: 15px;
         padding: 15px 10px;
-        flex-wrap: wrap; /* Garante que os links não estourem a tela */
+        flex-wrap: wrap;
     }
 
     .cabecalho img {
@@ -273,18 +264,15 @@ html {
         font-size: 16px;
     }
 
-    /* 2. Caixa principal: empilha o conteúdo verticalmente */
-        /* Dentro do @media (max-width: 768px) */
     .caixa-principal {
         flex-direction: column;
-        padding: 100px 20px 30px; /* 100px no topo para o celular */
+        padding: 100px 20px 30px; 
         height: auto;
         gap: 30px;
     }
 
-    /* 3. Textos e logos adaptáveis */
     .caixa-info-texto {
-        width: 100%; /* Ocupa a largura total da tela do celular */
+        width: 100%;
         text-align: center;
     }
 
@@ -298,27 +286,23 @@ html {
         line-height: 1.4;
     }
 
-    /* 4. Imagem do Mario e Luigi redimensionada */
     .logo-luidi-mario {
         width: 90%;
         max-width: 320px;
-        height: auto; /* Mantém a proporção correta sem achatar */
+        height: auto; 
     }
 
-    /* 5. Botão de contato */
     button {
         width: 100%;
         max-width: 260px;
     }
 
-    /* 6. Formulário modal no celular */
     form {
-        width: 90%; /* Ocupa quase toda a largura da tela mantendo margem */
+        width: 90%; 
         max-width: 320px;
         padding: 20px 15px;
     }
 
-    /* 7. WhatsApp flutuante um pouco menor */
     .link-whatsapp img {
         width: 50px;
     }

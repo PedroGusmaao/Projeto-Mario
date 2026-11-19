@@ -18,21 +18,24 @@ function mostrarForm() {
     mascara.style.visibility = "visible";
 }
 
+function mostrarForm() {
+    somMoeda.currentTime = 0;
+    somMoeda.volume = 0.5;
+    somMoeda.play();
+
+    // Move apenas o left. O transform continua intacto!
+    formulario.style.left = "50%";
+    mascara.style.visibility = "visible";
+}
+
 function esconderForm() {
     somCano.currentTime = 0;
     somCano.volume = 0.5;
     somCano.play();
 
-    // Joga de volta para fora da tela
+    // Apenas joga para a esquerda. Sem mexer no transform!
     formulario.style.left = "-400px";
-    formulario.style.transform = "translate(0, -50%)";
     mascara.style.visibility = "hidden";
 }
 
-// Fechar com a tecla Esc
-document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-        esconderForm();
-    }
-});
 
